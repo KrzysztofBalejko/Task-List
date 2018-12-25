@@ -5,7 +5,7 @@ Once completed user will be able to add and remove tasks from the list.
 
 Language: JavaScript
 
-Frameworks: Materialize CSS, Bootstrap
+Frameworks: Materialize CSS, BootstrapCDN for Font Awesome
 
 ## Getting started
 
