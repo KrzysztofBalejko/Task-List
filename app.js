@@ -10,14 +10,13 @@ function loadEventListeners() {
   form.addEventListener('submit', addTask);
   taskList.addEventListener('click',removeTask);
   clearBtn.addEventListener('click', clearTasks);
-  // New event: Filtering through tasks
   filter.addEventListener('keyup', filterTasks);
 }
 
 function addTask(e) {
   if(taskInput.value === '') {
     alert('Add a task');
-}
+  }
   const li = document.createElement('li');
   li.className = 'collection-item';
   li.appendChild(document.createTextNode(taskInput.value));
@@ -44,7 +43,7 @@ function clearTasks() {
     taskList.removeChild(taskList.firstChild);
   }
 }
-// Filtering through tasks
+
 function filterTasks(e) {
   const text = e.target.value.toLowerCase();
   document.querySelectorAll('.collection-item').forEach(function(task) {
