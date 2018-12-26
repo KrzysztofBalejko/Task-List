@@ -1,20 +1,21 @@
-// Defining UI variables
 const form = document.querySelector('#task-form');
 const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 
-// Loading event listeners
 loadEventListeners();
 
 function loadEventListeners(){
+  // Adding task event
   form.addEventListener('submit', addTask);
+  // Removing task event
+  taskList.addEventListener('click',removeTask);
 }
 
-// Adding tasks
+// Adding tasks to the list
 function addTask(e) {
-  if(taskInput.value === ''){
+  if(taskInput.value === '') {
     alert('Add a task');
 }
   const li = document.createElement('li');
@@ -27,5 +28,14 @@ function addTask(e) {
   taskList.appendChild(li);
   taskInput.value = '';
 
-  e.preventDefault();
+e.preventDefault();
+}
+
+// Removing tasks from the list
+function removeTask(e) {
+  if(e.target.parentElement.classList.contains('delete-item')) {
+    if(confirm('Are You Sure?')) {
+      e.target.parentElement.parentElement.remove();
+    }
+  }
 }
