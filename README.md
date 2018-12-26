@@ -1,17 +1,24 @@
 # Task-List
 
-Once completed user will be able to add and remove tasks from the list.
+This little app allows user to:
+
+* Add/remove tasks to the list.
+
+* Data is stored in a local storage which simply means that items will stay listed even if the site is reloaded.
+
+* Items will be removed from the storage once cleared or by clicking on [X].
 
 
-Language: JavaScript
+**Language: native JavaScript (no JQuery)**
 
-Frameworks: Materialize CSS, BootstrapCDN for Font Awesome
+**Frameworks: Materialize CSS, BootstrapCDN for Font Awesome**
+
 
 ## Getting started
 
 `git clone https://github.com/KrzysztofBalejko/Task-List.git`
 
- Open index.html file in your browser
+ Simply open index.html file in your browser
 
-
+ I recommend using Chrome instead of IE.
 
