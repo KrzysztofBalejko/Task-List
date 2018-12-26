@@ -66,12 +66,11 @@ function removeTask(e) {
   if(e.target.parentElement.classList.contains('delete-item')) {
     if(confirm('Are You Sure?')) {
       e.target.parentElement.parentElement.remove();
-      // Removing tasks from local storage
       removeTaskFromLocalStorage(e.target.parentElement.parentElement);
     }
   }
 }
-// New function added
+
 function removeTaskFromLocalStorage(taskItem) {
   let tasks;
   if(localStorage.getItem('tasks') === null) {
@@ -93,7 +92,7 @@ function clearTasks() {
   }
   clearTasksFromLocalStorage();
 }
-// New function added
+
 function clearTasksFromLocalStorage() {
   localStorage.clear();
 }
