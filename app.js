@@ -6,11 +6,13 @@ const taskInput = document.querySelector('#task');
 
 loadEventListeners();
 
-function loadEventListeners(){
+function loadEventListeners() {
   // Adding task event
   form.addEventListener('submit', addTask);
   // Removing task event
   taskList.addEventListener('click',removeTask);
+  // Clearing tasks event
+  clearBtn.addEventListener('click', clearTasks); 
 }
 
 // Adding tasks to the list
@@ -37,5 +39,12 @@ function removeTask(e) {
     if(confirm('Are You Sure?')) {
       e.target.parentElement.parentElement.remove();
     }
+  }
+}
+
+// Clearing tasks with a click of the button
+function clearTasks() {
+  while(taskList.firstChild) {
+    taskList.removeChild(taskList.firstChild);
   }
 }
