@@ -1,4 +1,4 @@
-# Task-List
+# Task-List #
 
 This little app allows user to:
 
@@ -14,11 +14,10 @@ This little app allows user to:
 **Frameworks: Materialize CSS, BootstrapCDN for Font Awesome**
 
 
-## Getting started
+## Getting started ##
 
 `git clone https://github.com/KrzysztofBalejko/Task-List.git`
 
  Simply open index.html file in your browser
 
  I recommend using Chrome instead of IE.
-
